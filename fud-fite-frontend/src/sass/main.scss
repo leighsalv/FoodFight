@@ -1,0 +1,63 @@
+@import url(
+'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+@import "reset";
+
+
+$white: #FFFFFF;
+
+$darkBlue: #3A4793;
+
+$lightBlue: #25B3EC;
+
+$lightPurple: #9787EE;
+
+$yellow: #FFBF3E;
+
+$black: #212121;
+
+$darkGray: #2E2E2E;
+
+$gray: #D1D1D1;
+
+$darkPurple: rgba(58,71,147,.6);
+
+$red: #CC0000;
+
+
+*,h1,h2,h3,h4,h5,h6,p,span,div{
+  font-family: 'Electrolize', sans-serif;
+  box-sizing: border-box;
+
+}
+
+a{
+  color: $white;
+  text-decoration: none;
+}
+
+html, body{
+  background: $black;
+  height: 100%;
+  overflow: hidden;
+}
+
+// login/signup page
+@import "home";
+// header part of main feed / profile page (includes add post button)
+@import "all-tasks";
+// main feed / profile page from header and below
+@import "content-area";
+
+.btn{
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  margin: 15px 0;
+  &.lightBlue{
+    color: $white;
+    font-size: 25px;
+    background: $lightBlue;
+    border: none;
+  }
+}

@@ -1,0 +1,11 @@
+# npm
+node_modules/
+npm-debug.log
+
+# deployd
+.dpd/
+data/
+public/uploads/
+
+#other
+.mongod.pid

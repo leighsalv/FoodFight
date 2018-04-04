@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"username": {
+			"name": "username",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "username",
+			"order": 0
+		},
+		"text": {
+			"name": "text",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "text",
+			"order": 1
+		},
+		"pictureId": {
+			"name": "pictureId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "pictureId",
+			"order": 2
+		},
+		"timestamp": {
+			"name": "timestamp",
+			"type": "date",
+			"typeLabel": "date",
+			"required": false,
+			"id": "timestamp",
+			"order": 3
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"yuckCount": {
+			"name": "yuckCount",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "yuckCount",
+			"order": 0
+		},
+		"pictureId": {
+			"name": "pictureId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "pictureId",
+			"order": 1
+		}
+	}
+}

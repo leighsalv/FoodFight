@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Füd Fite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="all-tasks">
+    <section class="header">
+      <div class="top">
+        <header>
+          <div class="logo">
+            FÜD FITE
+          </div>
+          <div class="logout-box">
+             <button data-logout="button" class="logout-button">Logout</button>
+          </div>
+        </header>
+      </div>
+    </section>
+    <section id="content-area" class="content-area">
+      <section id="content-area">
+        <div class="side-column">
+          <div class="widget-box photos">
+            <div class="head">
+              <div class="widget-icon-container">
+                <div class="widget-icon"> <i class="fa fa-cutlery" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="widget-title"> Food Categories </div>
+
+            </div>
+            <div class="body">
+              <div class="scroll-box">
+                <div class="pics" id="Breakfast-category">
+                  <img src="https://bit.ly/2GTGAdy" alt="pic">
+                  <button class="catbtn" value="Breakfast" onclick="loadToMain('Breakfast')">Breakfast</button>
+                </div>
+                <div class="pics" id="lunch-category">
+                  <img src="https://bit.ly/2IncP1Z" alt="pic">
+                  <button class="catbtn" value="Lunch" onclick="loadToMain('Lunch')">Lunch</button>
+                </div>
+                <div class="pics" id="dinner-category">
+                  <img src="https://bit.ly/2GyoIlg" alt="pic">
+                  <button class="catbtn" value="Dinner" onclick="loadToMain('Dinner')">Dinner</button>
+                </div>
+                <div class="pics" id="dessert-category">
+                  <img src="https://bit.ly/2uIY3Rg" alt="pic">
+                  <button class="catbtn" value="Dessert" onclick="loadToMain('Dessert')">Dessert</button>
+                </div>
+                <div class="pics" id="snack-category">
+                  <img src="https://bit.ly/2GuV7gu" alt="pic">
+                  <button class="catbtn" value="Snack" onclick="loadToMain('Snack')">Snack</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-area">
+
+          <div class="widget-box submenu">
+            <ul>
+              <li id="food-feed">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <span>Food Feed</span>
+              </li>
+              <li id="my-foods">
+                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                <span>My Foods</span>
+              </li>
+              <li id="yummiest">
+                <i class="fa fa-trophy" aria-hidden="true"></i>
+                <span>Yummiest</span>
+              </li>
+              <li id="yuckiest">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <span>Yuckiest</span>
+              </li>
+              <li>
+                <div class="upload-btn">
+                  <i class="fa fa-upload" aria-hidden="true"></i>
+                  <span>Upload</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="user-content">
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <section class="task-form">
+      <div class="close-btn">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <form class="" action="index.html" method="post">
+        <h3>Got Food?</h3>
+        <div class="form-group">
+          <label for="category">Pick a Category</label>
+          <select id="category" class="form-control" name="category">
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Snack">Snack</option>
+          </select>
+
+        </div>
+        <div class="form-group" id="upload-area">
+          <div class="upload-pictures">
+            <p for="file-upload">Want to join the food fight? Upload your food below!</p>
+            <input type="file" id="file-upload" onchange="setFiles(this)" multiple>
+          </div>
+          <button type="button" class="btn btn-success" onclick="uploadFiles()">Post</button>
+        </div>
+      </form>
+    </section>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="http://localhost:2403/dpd.js" type="text/javascript"></script>
+  <script src="scripts/checkauth.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/logouthandler.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/fileupload.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/maincontent.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/categories.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.upload-btn').on('click', function() {
+        $('.task-form').addClass('active')
+      })
+      $('.task-form .close-btn').on('click', function() {
+        $('.task-form').removeClass('active')
+        window.location.reload()
+      })
+    })
+
+  </script>
+</body>
+
+</html>

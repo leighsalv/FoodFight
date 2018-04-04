@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"yumCount": {
+			"name": "yumCount",
+			"type": "number",
+			"typeLabel": "number",
+			"required": true,
+			"id": "yumCount",
+			"order": 0
+		},
+		"pictureId": {
+			"name": "pictureId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "pictureId",
+			"order": 1
+		}
+	}
+}
